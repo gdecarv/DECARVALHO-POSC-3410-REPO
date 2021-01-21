@@ -9,17 +9,6 @@
 # Load tidyverse package  
 library(tidyverse)
 
-## ── Attaching packages ────────────────────────────────── tidyverse 1.3.0 ──
-
-## ✓ ggplot2 3.3.1     ✓ purrr   0.3.4
-## ✓ tibble  3.0.1     ✓ dplyr   1.0.0
-## ✓ tidyr   1.1.0     ✓ stringr 1.4.0
-## ✓ readr   1.3.1     ✓ forcats 0.5.0
-
-## ── Conflicts ───────────────────────────────────── tidyverse_conflicts() ──
-## x dplyr::filter() masks stats::filter()
-## x dplyr::lag()    masks stats::lag()
-
 # Load data  
 data(mpg)
 
@@ -33,7 +22,6 @@ str(mpg)
 mpg_df<-mpg
 
 # Check the structure of mpg_df using str()
-str(mpg)
 str(mpg_df)
 
 # Scatter plot of displ x hwy
@@ -60,19 +48,19 @@ ggplot(mpg_df, aes(x=displ , y=hwy, color=class ) )+
 # Lesson 3 ####
 
 # Call help for filter
-?(filter)
+?filter()
 
 # Call help for geom_bar()
-?(geom_bar)
+?geom_bar()
 
 # Call help for facet_wrap()
-?(facet_wrap)
+?facet_wrap()
 
 # ggplot - data layer, assign it to mpg_data
 mpg_data<-ggplot(data= mpg)
 
 # Call mpg_data
-?(mpg_data)
+mpg_data
 
 # Describe the output you see in the console.
 # I only see the command I entered, the input is not describing mpg_data 
@@ -110,9 +98,6 @@ mpg_wrap<-mpg_axis +
 # The same thing I have seen every time I use this function (will insert a scree capture now)
 
 # Re-assign mpg_wrap by adding facet wrapping, change nrow to 3.
-#I am now significantly lost
+#I am now considerably lost
 mpg_wrap<- facet_wrap(~class, nrow=3)
-
-
-
 
