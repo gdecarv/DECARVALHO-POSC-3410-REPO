@@ -36,14 +36,6 @@ ggplot(mpg_df, aes(x=displ , y=hwy, color=fl ) )+
 ggplot(mpg_df, aes(x=displ , y=hwy, color=class ) )+
   geom_point()
 
-## # A tibble: 5 x 11
-##   manufacturer model   displ  year   cyl trans    drv     cty   hwy fl    class 
-##   <chr>        <chr>   <dbl> <int> <int> <chr>    <chr> <int> <int> <chr> <chr> 
-## 1 chevrolet    corvet…   5.7  1999     8 manual(… r        16    26 p     2seat…
-## 2 chevrolet    corvet…   5.7  1999     8 auto(l4) r        15    23 p     2seat…
-## 3 chevrolet    corvet…   6.2  2008     8 manual(… r        16    26 p     2seat…
-## 4 chevrolet    corvet…   6.2  2008     8 auto(s6) r        15    25 p     2seat…
-## 5 chevrolet    corvet…   7    2008     8 manual(… r        15    24 p     2seat…
 
 # Lesson 3 ####
 
@@ -81,7 +73,7 @@ mpg_axis <- mpg_plot +
   ggtitle("Engine Size and Mileage by Vehicle Class")
 
 # Call mpg_axis
-?(mpg_axis)
+mpg_axis
 
 # What do you see?
 # Basically the same screen that came up when I used the call command before in the bottom right panel
@@ -92,7 +84,7 @@ mpg_wrap<-mpg_axis +
   facet_wrap(~class, nrow=2)
 
 # Call mpg_wrap
-?(mpg_wrap)
+mpg_wrap
 
 # What do you see?
 # The same thing I have seen every time I use this function (will insert a scree capture now)
@@ -101,3 +93,5 @@ mpg_wrap<-mpg_axis +
 #I am now considerably lost
 mpg_wrap<- facet_wrap(~class, nrow=3)
 
+git config --global user.email "gdecarv@clemson.edu"
+git config --global user.name "George DeCarvalho"
